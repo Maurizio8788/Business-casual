@@ -7,6 +7,8 @@ error_reporting(E_ALL);
 require_once('./booking/db.php');
 require_once('./booking/booking.php');
 
+session_start();
+
 
 $booking = new Booking($conn);
 
