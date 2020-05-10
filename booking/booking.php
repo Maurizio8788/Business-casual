@@ -35,11 +35,11 @@ class Booking
     $q = "INSERT INTO booking(nome,telefono,email,intolleranze,data_prenotazione,hour) VALUES( ?, ?, ?, ?, ?, ? )";
 
     try {
-      $stmt = $this->PDO->query($q);
+      $stmt = $this->PDO->prepare($q);
       $stmt->execute( [ $nome, $tel, $email, $intolleranze, $data, $hour ] );
       $stmt =null;
     } catch( PDOException $e ) {
-      $e->getMessage();
+      echo $e->getMessage();
     }
 
 

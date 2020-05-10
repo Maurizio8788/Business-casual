@@ -1,3 +1,6 @@
+
+
+
 (function($) {
   "use strict"; // Start of use strict
 
@@ -47,6 +50,14 @@
   });
 
 
-    $('#dataTable').DataTable();
-
 })(jQuery); // End of use strict
+
+const editor = new EditorJS({
+  tools:{
+    header:{
+      class:Header,
+      inlineToolbar:[ 'link' ]
+    }
+
+  }
+});
