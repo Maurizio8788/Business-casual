@@ -53,6 +53,7 @@
 })(jQuery); // End of use strict
 
 const editor = new EditorJS({
+  holderId:'editorjs',
   tools:{
     header:{
       class:Header,
